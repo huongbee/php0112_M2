@@ -52,8 +52,10 @@ class hocsinh{
 }
 
 $obj = new hocsinh;
-
-var_dump($obj);
+//var_dump($obj);
+echo $obj->hoten;
+echo "<br/>";
+echo $obj->tuoi
 
 
 ?>
