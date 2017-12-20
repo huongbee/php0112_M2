@@ -46,17 +46,42 @@
 // echo "</pre>";
 
 
-class hocsinh{
-    public $hoten = "Ban A";
-    public $tuoi = 20;
-}
+// class hocsinh{
+//     public $hoten = "Ban A";
+//     public $tuoi = 20;
+// }
 
-$obj = new hocsinh;
-//var_dump($obj);
-echo $obj->hoten;
-echo "<br/>";
-echo $obj->tuoi
+// $obj = new hocsinh;
+// //var_dump($obj);
+// echo $obj->hoten;
+// echo "<br/>";
+// echo $obj->tuoi;
 
+// $a = 1;
+// $a = 2;
+// echo $a;
+
+//define('pi',3.14);
+
+//define('pi',3.16);//không được định nghĩa lại 
+//echo pi;
+//$r = 10;
+
+//Cho bán kính r=10, pi=3.14, tính C, S của hình tròn trên 
+
+/**
+ * In ra màn hình như sau:
+ * - Chu vi hình tròn bán kính 10 là: ....
+ * - Diện tích htron bán kính 10 là:  .... 
+ * 
+ */
+$r = 100;
+define('pi',3.14);
+$c = 2*pi*$r;
+$s = pi*$r*$r;
+echo "- Chu vi hình tròn bán kính ".$r." là: $c";
+echo "<br>";
+echo "- Diện tích htron bán kính $r là: $s";
 
 ?>
 
