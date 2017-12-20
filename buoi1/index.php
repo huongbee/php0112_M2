@@ -17,6 +17,20 @@
  * 
  * 
  */
+$arr3 = ['hoten'=>'Nguyen Van A', 'tuoi'=>20];
+$arr2 = ['PHP', 'iOS','NodeJS', $arr3];
+
+$arr = array("Khoa Pham", "Hoa", 12, "phantu4"=>true, $arr2);
+//echo $arr;
+echo "<pre>";
+print_r($arr);
+echo "</pre>";
+
+echo $arr[0];
+echo "<br/>";
+
+echo $arr[3][2]
+echo "<br/>";
 
 ?>
 
