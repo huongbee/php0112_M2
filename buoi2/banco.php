@@ -14,40 +14,30 @@
         width:100px;
         height:100px;
         float:left;
+        font-size:30px
     }
     .o-trang{
         background-color: #fff
     }
     .o-den{
-        background-color: #000
+        background-color: #000;
+        color:#fff
     }
 </style>
 <body>
     <div class="banco">
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
-        <div class="o-den"></div>
-        <div class="o-trang"></div>
 
+        <?php
+        for($i=1; $i<=8; $i++){
+            for($j = 1 ; $j<=8 ; $j++){
+                if(($j+$i)%2 == 0){
+                    echo "<div class='o-trang'>".$i .' '. $j."</div>";
+                }
+                else
+                    echo "<div class='o-den'>".$i .' '. $j."</div>";
+            }
+        }
+        ?>
     </div>
 </body>
 </html>
