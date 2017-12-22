@@ -66,7 +66,17 @@ $str = "Hello";
 $str2 = " World!";
 
 //echo $str.$str2;
-echo $str.=$str2; //~$str = $str.$str2 
+//echo $str.=$str2; //~$str = $str.$str2 
+
+
+$arr = ['PHP', 'iOS', 'Android', 'NodeJS'];
+
+//echo $arr[1];
+$count = count($arr);
+
+for($i=0; $i<=$count; $i++){
+    echo $arr[$i] . '<br>';
+}
 
 
 ?>
