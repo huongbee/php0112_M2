@@ -69,13 +69,31 @@ $str2 = " World!";
 //echo $str.=$str2; //~$str = $str.$str2 
 
 
-$arr = ['PHP', 'iOS', 'Android', 'NodeJS'];
+// $arr = ['PHP', 'iOS', 'Android', 'NodeJS'];
 
-//echo $arr[1];
+// //echo $arr[1];
+// $count = count($arr); //4
+
+// for($i=0; $i<$count; $i++){
+//     echo $arr[$i] . '<br>';
+// }
+
+
+$arr = [
+    'monhoc1'=> 'PHP', 
+    'monhoc2'=> 'iOS', 
+    'monhoc' => 'Android',
+    'monhoc4'=> 'NodeJS'
+];
 $count = count($arr);
 
-for($i=0; $i<=$count; $i++){
-    echo $arr[$i] . '<br>';
+//echo $arr['monhoc4'];
+// for($i=0; $i<$count; $i++){ 
+//     echo $arr[''];
+// }
+foreach($arr as $key=>$value){
+    //echo $key . "<br>";
+    echo $value . "<br>";
 }
 
 
