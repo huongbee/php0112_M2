@@ -7,6 +7,47 @@
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
+
+<?php
+
+$arrSP = [
+    [
+        'name'=>"iPhone 5s",
+        'price'=>"500000",
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-1-400x460.png'
+    ],
+    [
+        'name'=>"iPhone 6",
+        'price'=>"600000",
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/118143/huawei-nova-2i-2-400x460.png'
+    ],
+    [
+        'name'=>"iPhone 7",
+        'price'=>"5000000",
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/112833/sony-xepria-xa1-plus-1-400x460.png'
+    ],
+    [
+        'name'=>"iPhone 6s",
+        'price'=>"650000",
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/118143/huawei-nova-2i-2-400x460.png'
+    ],
+    [
+        'name'=>"iPhone 8s",
+        'price'=>"50000000",
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/103404/samsung-galaxy-j7-pro-2323-400x460.png'
+    ],
+    [
+        'name'=>"iPhone X",
+        'price'=>"60000000",
+        'image'=>'https://cdn.tgdd.vn/Products/Images/42/118143/huawei-nova-2i-2-400x460.png'
+    ]
+];
+
+
+?>
+
+
+
 <body>
     <div class="container">
         <div class="sanpham">
