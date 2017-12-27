@@ -43,119 +43,27 @@ $arrSP = [
     ]
 ];
 
-
+//echo number_format(2000000000,3,',','.');
 ?>
 
 
 
 <body>
     <div class="container">
+        <?php foreach($arrSP as $sanpham):?>
         <div class="sanpham">
             <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
+                <img src="<?=$sanpham['image']?>">
             </div>
             <div class="thongtin">
                 <p>Giao hàng tận nơi miễn phí</p>
                 <p>Khuyến mãi: tai nghe...</p>
                 <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
             </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
+            <div class="tensanpham"><?=$sanpham['name']?></div>
+            <div class="giasanpham"><?=number_format($sanpham['price'])?></div>
         </div>
-        <div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div>
-        <div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div><div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div>
-        <div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div>
-        <div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div><div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div>
-        <div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div>
-        <div class="sanpham">
-            <div class="hinh">
-                <img src="images/iphone-x-64gb-1-400x460.png">
-            </div>
-            <div class="thongtin">
-                <p>Giao hàng tận nơi miễn phí</p>
-                <p>Khuyến mãi: tai nghe...</p>
-                <p>Giao hàng tận nơi miễn phí trong 30 phút</p>
-            </div>
-            <div class="tensanpham">iPhone X 64GB</div>
-            <div class="giasanpham">30.000.000</div>
-        </div>
+        <?php endforeach?>
     </div>
 </body>
 </html>
