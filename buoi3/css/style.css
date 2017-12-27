@@ -1,0 +1,46 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+.sanpham {
+    width: 31.333333%;
+    float: left;
+    background-color: #ffffff;
+    margin: 1%;
+    border-radius: 5px
+}
+
+.hinh,
+.thongtin {
+    width: 50%;
+    float: left;
+}
+
+.hinh img {
+    width: 90%;
+    margin: auto;
+    display: block
+}
+
+.tensanpham,
+.giasanpham {
+    width: 100%;
+    clear: both;
+    line-height: 30px;
+    padding: 5px 10px;
+    font-size: 22px;
+    text-transform: uppercase
+}
+
+.tensanpham {
+    color: red
+}
+
+.giasanpham {
+    color: blue
+}

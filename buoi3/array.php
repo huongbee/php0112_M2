@@ -28,6 +28,31 @@ foreach($arr2 as $value){
     echo "</pre>";
 }
 $arr3 = $arr2['key3'];
+foreach($arr3 as $phantu){
+    echo $phantu;
+    echo "<br>";
+}
+echo "<hr>";
+foreach($arr2 as $key=>$value){
+    echo $key;
+    echo "<br>";
+}
+echo "<hr>";
+foreach($arr2 as $value){
+    if(gettype($value)=="array"){
+        foreach($value as $phantu){
+            echo $phantu;
+            echo "<br>";
+        }
+    }
+    else {
+        echo $value;
+        echo "<br>";
+    }
+}
 
 
+
+
+echo "<br><br><br><br><br><br><br><br><br><br><br>";
 ?>
