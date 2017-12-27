@@ -51,6 +51,44 @@ foreach($arr2 as $value){
     }
 }
 
+$str = "Hello World!";
+$array = explode(' ',$str);
+echo "<pre>";
+print_r($array);
+echo "</pre>";
+
+$str2 = implode(' ',$array);
+echo $str2;
+
+$arr2 = array(
+    'key1'=>'soccer',
+    'key2'=>24,
+    'key3'=>array(2,3,5)
+);
+// echo "<hr>";
+// echo $result = array_search('soccer',$arr2);
+
+$arr3 = [545,3343,45454];
+$arr4 = array_merge($arr2,$arr3);
+echo "<pre>";
+print_r($arr4);
+echo "</pre>";
+
+$arr3 = [545,3343,45454];
+array_splice($arr3,1,0,'KPT');
+echo "<pre>";
+print_r($arr3);
+echo "</pre>";
+
+
+
+$arr3 = [545,3343,45454];
+$arr5 = [9,8,7];
+array_splice($arr3,2,1,$arr5);
+
+echo "<pre>";
+print_r($arr3);
+echo "</pre>";
 
 
 
