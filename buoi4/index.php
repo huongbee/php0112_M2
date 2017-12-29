@@ -99,5 +99,34 @@ function inSNT($n){
     return "Day cac snt < $n la: $result";
 }
 
-echo inSNT(100);
+//echo inSNT(100);
+
+
+//2 3
+//3 2
+
+function wap($a, $b){
+    //C1;
+    // $t = $b;
+    // $b = $a;
+    // $a = $t;
+
+    //C2:
+    // a=7 b=3
+    //a = 10
+    //b = 10 - 3 = 7
+    //a = a-b = 10-7 = 3
+    $a = $a + $b;
+    $b = $a - $b;
+    $a = $a - $b;
+
+    return [$a,$b];
+}
+
+print_r(wap(5,6));
+
+
+
+
+
 ?>
