@@ -63,18 +63,29 @@ function inSo($number){
 //20:  2 3 5 7 11 13 17 19
 
 
-function cong(&$a,&$b){
-    $a = 1323;
-    return $b=$a+$b;
+// function cong(&$a,&$b){
+//     $a = 1323;
+//     return $b=$a+$b;
+// }
+
+// $a = 12;
+// $b = 2;
+// echo cong($a,$b);
+// echo "<br>";
+// echo 'a = '.$a;
+// echo "<br>";
+// echo 'b = '.$b;
+
+
+function checkSNT($num){
+    for($i=2; $i<=sqrt($num); $i++){
+        if($num%$i == 0){
+            return false;
+        }
+        else return true;
+    }
 }
 
-$a = 12;
-$b = 2;
-echo cong($a,$b);
-echo "<br>";
-echo 'a = '.$a;
-echo "<br>";
-echo 'b = '.$b;
 
 
 ?>
