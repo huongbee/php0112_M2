@@ -82,10 +82,22 @@ function checkSNT($num){
         if($num%$i == 0){
             return false;
         }
-        else return true;
     }
+    return true;
+    
+}
+// var_dump(checkSNT(3));
+
+// die;
+function inSNT($n){
+    $result = '';
+    for($i=2; $i < $n; $i++){
+        if(checkSNT($i)){
+            $result .= $i. ' ';
+        }
+    }
+    return "Day cac snt < $n la: $result";
 }
 
-
-
+echo inSNT(100);
 ?>
