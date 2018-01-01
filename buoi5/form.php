@@ -7,15 +7,14 @@
     <title>Form</title>
 </head>
 
-<?php
-echo $name = $_GET['txtFullname'];
-
-?>
-
 <body>
-    <form method="get">
-        <input type="text" name="txtFullname" placeholder="Enter your name">
-        <input type="number" name="txtAge" placeholder="Enter your age">
+    <form method="POST" action="xuly.php" enctype="multipart/form-data">
+        <input type="text" name="txtFullname" placeholder="Enter your name" 
+            value="<?php echo @$_POST['txtFullname'];?>"    >
+        <input type="number" name="txtAge" placeholder="Enter your age" 
+            value="<?=@$_POST['txtAge']?>" >
+
+        <input type="file" name="hinhanh" >
         <button type="submit" name="btnSend">Send</button>
     </form>
 </body>
