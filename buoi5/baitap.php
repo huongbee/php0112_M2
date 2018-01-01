@@ -9,12 +9,12 @@ function KiemTraNamNhuan($year){
 
 //2016 2020 2014
 //
-
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 $v = KiemTraNamNhuan(2020);
 
 $date  = getdate();
-$month = 2;//$date['mon']; 
-$year = 2016;$date['year'];
+$month = 2;   //$date['mon']; 
+$year = 2016;  //$date['year'];
 $d = cal_days_in_month(CAL_GREGORIAN,$month,$year);
 //echo $d;
 
