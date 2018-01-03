@@ -21,6 +21,10 @@ if(isset($_REQUEST['btnSend'])){
 
     $file = $_FILES['hinhanh'];
     
+    //file size <1MB
+    //chỉ cho phép upload file doc, docx, pdf
+    //rename 
+
     echo "<pre>";
     print_r($file);
     echo "</pre>";
