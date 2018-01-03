@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="xuly-multiple.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="my-file" multiple>
+        <input type="file" name="myfile[]" multiple>
         <button type="submit">Send</button>
     </form>
 </body>
