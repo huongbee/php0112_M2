@@ -14,6 +14,7 @@ session_start();
 // }
 
 if(isset($_POST['btnLogin'])){
+
     $username = $_POST['usr'];
     $password = $_POST['pwd'];
 
@@ -23,6 +24,11 @@ if(isset($_POST['btnLogin'])){
     // admin : 111111
     if($_SESSION['username'] == "admin" && $_SESSION['password'] == '111111'){
         //echo "Login success";
+        if(isset($_POST['remember']) && $_POST['remember']==1){
+            //nhớ đăng nhập
+            setcookie('username',$_SESSION['username'],time()+180);
+            setcookie('password',$_SESSION['password'],time()+180);
+        }
         header('Location:index.php');
     }
     else{
