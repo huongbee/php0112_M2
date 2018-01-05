@@ -29,7 +29,10 @@ if(isset($_POST['btnLogin'])){
         $_SESSION['message'] = "Login fail! Try again!";
         header('Location:login.php');
     }
-
+}
+else{
+    $_SESSION['message'] = "Login fail! Try again!";
+    header('Location:login.php');
 }
 
 

@@ -6,5 +6,6 @@ if($_SESSION['username'] == "admin" && $_SESSION['password'] == '111111'){
     echo "<br><a href='logout.php'>Đăng xuất</a>";
 }
 else{
+    $_SESSION['message'] = "Bạn vui lòng đăng nhâp";
     header('Location:login.php');
 }
