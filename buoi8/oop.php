@@ -42,6 +42,7 @@ echo "<br>";
 echo $sv2->getName();
 echo "<br>";
 echo $sv2->age; //get
+//echo $sv2->getAge();
 
 echo "<br>";
 var_dump($sv2);
