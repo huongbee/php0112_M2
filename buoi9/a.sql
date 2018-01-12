@@ -23,6 +23,9 @@ CREATE TABLE bill(
 
 
 
+
+
+
 ALTER TABLE `users` CHANGE `id` `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'khoa chinh';
 
 ALTER TABLE bill CHANGE date_order date_order  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -35,3 +38,24 @@ ADD quantity INT(11) DEFAULT 0
 ALTER TABLE `users` ADD `gender` VARCHAR(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'nam' AFTER `fullname`;
 
 -- https://www.w3resource.com/mysql/mysql-tutorials.php
+
+users                 bill
+id                     id
+                     user_id
+
+
+
+bill_id
+1 huong 123 LTR admin 12/12/2018    11
+1 huong                             12
+
+11 100 2 12/12/2016 1
+12 400 4 
+
+
+ALTER TABLE `bill` 
+ADD `user_id` INT(10) UNSIGNED NOT NULL AFTER `quantity`;
+
+
+ALTER TABLE bill
+ADD FOREIGN KEY (user_id) REFERENCES users(id)
