@@ -92,4 +92,9 @@ CREATE TABLE `php0112`.`products` (
     PRIMARY KEY (`id`)
 )
 
+ALTER TABLE `products` 
+ADD FOREIGN KEY (`type_id`) REFERENCES `type_product`(`id`) 
+ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
 
