@@ -59,3 +59,21 @@ ADD `user_id` INT(10) UNSIGNED NOT NULL AFTER `quantity`;
 
 ALTER TABLE bill
 ADD FOREIGN KEY (user_id) REFERENCES users(id)
+
+ALTER TABLE `bill` 
+ADD CONSTRAINT `khoa_ngoai_1` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+tạo 2 TABLE
+ - products : id int  là khoá chính, tự tăng
+             name chuỗi, không được rỗng
+             quantity int , mặc định là 0,
+             đơn giá mặc định là 0,
+             date: lưu ngày nhập hàng
+- type_product: id: 
+                name:
+                date_create: 
+Tạo liên kết giữa 2 table này 
+
+CREATE TABLE `php0112`.`type_product` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `date_create` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
