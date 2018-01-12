@@ -75,5 +75,21 @@ tạo 2 TABLE
                 date_create: 
 Tạo liên kết giữa 2 table này 
 
-CREATE TABLE `php0112`.`type_product` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `date_create` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `php0112`.`type_product` ( 
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT , 
+    `name` VARCHAR(50) NOT NULL , 
+    `date_create` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+    PRIMARY KEY (`id`)
+) 
+
+CREATE TABLE `php0112`.`products` ( 
+    `id` INT NOT NULL AUTO_INCREMENT , 
+    `type_id` INT UNSIGNED NOT NULL , 
+    `name` VARCHAR(100) NOT NULL , 
+    `quantity` INT NOT NULL DEFAULT '0' , 
+    `price` DOUBLE NOT NULL DEFAULT '0' , 
+    `date_create` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+    PRIMARY KEY (`id`)
+)
+
 
