@@ -14,3 +14,5 @@ VALUES (2,"San pham 2", 5,50000);
 UPDATE products SET 
 price=60000
 WHERE id=4
+
+
