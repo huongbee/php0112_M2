@@ -107,3 +107,37 @@ FROM  food_type t
 INNER JOIN foods f 
     ON t.id = f.id_type
 GROUP BY t.name 
+
+SELECT t.name as tenloai, min(f.price) as minPrice --max()
+FROM  food_type t
+INNER JOIN foods f 
+    ON t.id = f.id_type
+GROUP BY t.name 
+
+
+SELECT t.name as tenloai, sum(f.price) as total, count(f.id) as qty
+FROM  food_type t
+INNER JOIN foods f 
+    ON t.id = f.id_type
+WHERE price BETWEEN 50000 AND 100000
+GROUP BY t.name 
+
+SELECT b.id as soHD, date_order, sum(d.quantity) as tongSL, b.total
+FROM bills  b 
+INNER JOIN bill_detail d 
+    ON b.id = d.id_bill 
+GROUP BY b.id
+
+SELECT t.name as tenloai, avg(f.price) as dgtb
+FROM  food_type t
+INNER JOIN foods f 
+    ON t.id = f.id_type
+WHERE t.name = "Món Canh Bổ Dưỡng"
+GROUP BY t.name 
+
+-- liệt kê ds sp thuộc loại Món Canh Bổ Dưỡng 
+SELECT f.* 
+FROM foods f
+INNER JOIN food_type  t 
+    ON f.id_type = t.id 
+WHERE t.name="Món Canh Bổ Dưỡng"
