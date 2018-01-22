@@ -32,19 +32,49 @@ class DBConnect{
         return $stmt->execute();
     }
 
-
     //SELECT 1
+    function loadOneRow($sql,$value=[]){
+        $stmt = $this->setStatement($sql,$value);
+        $check = $stmt->execute();
+        if($check){
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        }
+        return false;
+    }
 
     //SELECT >1
+    function loadMoreRows($sql,$value=[]){
+        $stmt = $this->setStatement($sql,$value);
+        $check = $stmt->execute();
+        if($check){
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        }
+        return false;
+    }
+
 }
 
-$sql = "DELETE FROM users WHERE username='khoa11'";
+$sql = "SELECT * FROM users WHERE id=? OR username=?";
+$value = [ 
+    $_GET['id'], 
+    $_GET['user'] 
+];
 $db = new DBConnect;
-$result = $db->executeQuery($sql);
+$result = $db->loadMoreRows($sql,$value);
 if($result){
-    echo "Success";
+    echo "<pre>";
+    print_r($result);
+    echo "</pre>";
 }
-else echo "Error";
+else var_dump($result);
+
+// $sql = "DELETE FROM users WHERE username='khoa11'";
+// $db = new DBConnect;
+// $result = $db->executeQuery($sql);
+// if($result){
+//     echo "Success";
+// }
+// else echo "Error";
 
 
 
