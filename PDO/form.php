@@ -7,7 +7,7 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="b2.php" method="post">
+    <form action="DBConnect.php" method="post">
         Username:
         <br>
         <input type="text" name="user" placeholder="Enter username">
