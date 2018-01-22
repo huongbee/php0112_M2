@@ -11,10 +11,10 @@ catch(PDOException $e){
 $sql = "INSERT INTO users(username,password,fullname,email) 
         VALUES (?,?,?,?)";
 
-$username = "khoaphamtraining";
-$password = md5(md5("123456").'pdo'); //'1234568uyfdsdsffh'
-$fullname = "Khoa Pham Training";
-$email = "khoaphamtraining@gmail.com";
+$username = $_POST['user'];
+$password = md5(md5($_POST['password']).'pdo'); //'1234568uyfdsdsffh'
+$fullname = $_POST['fullname'];
+$email = $_POST['email'];
  
 $stmt = $db->prepare($sql);
 $stmt->bindParam(1,$username);
