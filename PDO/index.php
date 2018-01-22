@@ -35,9 +35,15 @@ $check = $stmt->execute(); //thực thi câu query true/false
 if($check){
     $result = $stmt->fetchAll(PDO::FETCH_OBJ); //lấy all data phù hợp với $sql
     
-    echo "<pre>";
-    print_r($result);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($result);
+    // echo "</pre>";
+    foreach($result as $user){
+        echo "<h3>".$user->username."</h3>";
+        echo "<br>";
+        echo "<h3>".$user->fullname."</h3>";
+        echo "<br>";
+    }
 }
 
 
